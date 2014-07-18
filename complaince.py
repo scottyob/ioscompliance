@@ -65,7 +65,7 @@ if __name__ == '__main__':
 			if check.description:
 				to_print += " - " + check.description
 			print to_print
-			sys.exit(0)
+		sys.exit(0)
 
 	if args.andFix: #ToDo:  Write this
 		raise NotImplementedError
@@ -73,7 +73,7 @@ if __name__ == '__main__':
 	#Check to see if we should only load up a single device
 	devices = [] #Devices to check
 	if args.host:
-		devices.append(IOSDevice(CONFIG_LOCATION + "/" + check.host))
+		devices.append(IOSDevice(CONFIG_LOCATION + "/" + args.host))
 	else:
 		for filename in os.listdir("/data/network/configs"):
 			filename = "/data/network/configs/" + filename
